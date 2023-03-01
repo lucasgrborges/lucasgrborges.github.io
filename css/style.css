@@ -488,7 +488,7 @@ section:nth-of-type(6){
     .nav-list li{
         flex-direction: column;
         text-align: center;
-        font-size: 12px;
+        font-size: 8px;
     }
     }
 }
