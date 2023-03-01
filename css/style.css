@@ -490,5 +490,9 @@ section:nth-of-type(6){
         text-align: center;
         font-size: 8px;
     }
-    }
+  
+    .container-text{
+    padding: 340px 0 0 30px;
+
+}
 }
