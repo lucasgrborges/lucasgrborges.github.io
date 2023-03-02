@@ -494,4 +494,10 @@ section:nth-of-type(6){
     .container-text{
     padding: 340px 0 0 30px;
     }
+  
+    .title-services h2{
+    font-size: 50px;
+}
+  
+  
 }
