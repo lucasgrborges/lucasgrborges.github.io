@@ -21,27 +21,48 @@
   <body>
 
     <header>
-      <nav>
-        <div>
-          <a class="logo" href=""><span>DEV</span> Sonhador</a>
-          <div class="mobile-menu"></div>
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#sessao1">Home</a></li>
-          <li><a href="#sessao2">Sobre mim</a></li>
-          <li><a href="#sessao3">Serviços</a></li>
-          <li><a href="#sessao4">Projetos</a></li>
-          <li><a href="#sessao5">Depoimentos</a></li>
-          <li><a href="#sessao6">Contato</a></li>
+        <div class="navbar"> 
+          <div class="logo"><a href=""><span>DEV</span> Sonhador</a></div>
+          <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+         <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+         </div>
 
-        </ul>
-      </nav>
+         <div class="dropdown_menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+         </div>
+      </div>
     </header>
 
-        <section id="sessao1">
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function (){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+
+      }
+    </script>
+
+        <section class="section1" id="home">
           <div class="container-text">
             <div class="text">
                 <h3>Olá, seja bem-vindo(a)</h3>
@@ -66,7 +87,7 @@
           </div>
         </section>
         
-        <section class="section2" id="sessao2">
+        <section class="section2" id="about">
           <div class="main-about">
             <div class="image-about">            
               <img src="../css/images/about.jpg" alt="">
@@ -80,7 +101,7 @@
           </div>
         </section>
 
-        <section id="sessao3">
+        <section id="skills">
           <div class="container-services">
             <div class="title-services">
               <h2>Habilidades</h2>
@@ -90,7 +111,7 @@
               <div class="card">
                 <i class="fa-solid fa-code"></i>              
                 <h5>Desenvolvimento Web</h5>
-                <p>Desenvolvo sites utilizando técnias modernas e ágeis</p>
+                <p>Desenvolvo sites utilizando técnias modernas ágeis que visam agregar valor ao produto/serviço</p>
                 <h5>Linguagens</h5>
                 <p>Javascript, HTML, CSS, Python, PHP</p>
                 <h5>Dev Tools</h5>
@@ -131,7 +152,7 @@
           </div> <!--container-services -->
         </section>
         
-        <section id="sessao4">
+        <section id="projects">
           <div class="section-projects">
             <h1>Em processo de construção</h1>
             <div class="person-digging">
@@ -141,7 +162,7 @@
           
         </section>
         
-        <section id="sessao5">
+        <section id="testimonials">
           <div class="top-section">
             <h1>Depoimentos</h1>
             <h2>O que pessoas que trabalharam comigo dizem sobre mim:</h2>
@@ -151,7 +172,7 @@
             <div class="columns-central swipper-wrapper">
                 <div class="slides swipper-sllide">
                   <img src="/css/images/testimonial-Vanessa.jpg" alt="" class="image">
-                  <p>"Aluno aplicado, comprometido e dedicado, trabalhou comigo por dois anos na incubadora, recomendo!"</p>
+                  <p>"Aluno aplicado, comprometido e dedicado, trabalhou comigo por dois anos na incubadora. Recomendo!""</p>
                   
                   <i class="fa-solid fa-quote-left quote-icon"></i>
 
@@ -172,7 +193,7 @@
                     
         </section>
 
-        <section id="sessao6">
+        <section id="contact">
           <div class="my-phrase"> <h1>Vivendo, aprendendo & progrendindo um dia após o outro.</h1></div>
             <div class="social-icons">
               
