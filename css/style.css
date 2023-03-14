@@ -35,6 +35,7 @@ header{
     width: 100%;
     position: fixed;
     background: linear-gradient(rgba(0,0,0,0.7), transparent);
+    z-index: 2;
 }
 
 .navbar{
@@ -47,12 +48,13 @@ header{
 }
 
 .logo{
-    font-size: 30px;
+    font-size: 34px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family: "Share Tech";
     color: #fffdeb;
     margin-left: 50px;
+    z-index: 2;
 }
 
 .logo span{
@@ -63,7 +65,7 @@ header{
     display: flex;
     gap: 2rem;
     margin-right: 50px;
-    font-size: 20px;  
+    font-size: 25px;  
 }
 
 .navbar .toggle_btn{
@@ -71,24 +73,25 @@ header{
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
+    z-index: 3;
 }
 
 /*DROPDOWN MENU*/
 .dropdown_menu{
     display: none;
     position: absolute;
-    right: 2rem;
-    top: 60px;
+    top: 0px;
+    right: 0;
+    width: 50vw;
     height: 0;
-    width: 300px;
-    background: rgba(225, 225, 225, 0.1);
+    background: #1c1c1c;
     backdrop-filter: blur(15px);
-    border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 .dropdown_menu li{
+    margin-top: 50px;
     padding: 0.7rem;
     display: flex;
     align-items: center;
@@ -96,7 +99,7 @@ header{
 }
 
 .dropdown_menu.open{
-    height: 240px;
+    height: 670px;
 }
 
 
@@ -500,6 +503,28 @@ section:nth-of-type(6){
 
 
 /* Responsive code desing */
+@media screen and (max-width: 1100px){
+
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+        margin-right: 18px;
+    }
+    .dropdown_menu{
+        display: block;
+        font-size: 25px;
+    }
+    .main-about{
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+
+
 @media screen and (max-width: 979px) {
     .navbar .links{
         display: none;
@@ -533,15 +558,6 @@ section:nth-of-type(6){
         text-align: center;
     }
     
-    .nav-list a{
-        flex-wrap: wrap;
-
-    }
-    .nav-list li{
-        flex-direction: column;
-        text-align: center;
-        font-size: 18px;
-    }
     .container-text{
         padding: 340px 0 0 30px;
     }
@@ -556,9 +572,6 @@ section:nth-of-type(6){
     }
 }
 @media screen and (max-width: 576px){
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
+    
 
 }
