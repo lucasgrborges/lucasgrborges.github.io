@@ -59,7 +59,14 @@
         toggleBtnIcon.classList = isOpen
           ? 'fa-solid fa-xmark'
           : 'fa-solid fa-bars'
-      }      
+        }
+        
+        document.onclick = function(e){
+          if(!toggleBtn.contains(e.target) && !toggleBtnIcon.contains(e.target))
+            dropDownMenu.classList.remove('open')
+
+
+            }
     </script>
 
         <section class="section1" id="home">
