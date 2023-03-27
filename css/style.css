@@ -82,7 +82,7 @@ header{
     position: absolute;
     top: 0px;
     right: 0;
-    width: 50vw;
+    width: 100%;
     height: 0;
     background: #1c1c1c;
     backdrop-filter: blur(15px);
@@ -91,15 +91,15 @@ header{
 }
 
 .dropdown_menu li{
-    margin-top: 50px;
-    padding: 0.7rem;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    padding-top: 80px;
 }
 
 .dropdown_menu.open{
-    height: 670px;
+    height: 800px;
+    
 }
 
 
